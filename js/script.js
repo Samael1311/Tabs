@@ -9,7 +9,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		for (let i = a; i < tabContent.length; i++) {
 			tabContent[i].classList.remove('show');
 			tabContent[i].classList.add('hide');
-			
+			 
 		}
 	}
 

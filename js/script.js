@@ -26,14 +26,16 @@ window.addEventListener('DOMContentLoaded', function(){
 	info.addEventListener('click', function (event){
 		if(event.target && event.target.classList.contains('info-header-tab')){
 			for (let i = 0; i < tab.length; i++) {
-				if(event.target == tab[i]){}
+				if(event.target == tab[i]){
 				hideTabs(0);
 				showTabs(i);
 				break;
 			}
+
+			}
 		}
 
-	})
+	});
 
 
 

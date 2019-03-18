@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		tabContent = document.querySelectorAll('.info-tabcontent');
 
 
-	function hideTabs(a = 1){
+	let hideTabs = function (a = 1){
 		for (let i = a; i < tabContent.length; i++) {
 			tabContent[i].classList.remove('show');
 			tabContent[i].classList.add('hide');
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	hideTabs();
 
-	function showTabs(b){
+	let showTabs = function (b){
 
 		if(tabContent[b].classList.contains('hide')){
 			tabContent[b].classList.remove('hide');
@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function(){
 //timer
 let deadline = '2019-03-20';
 
-function getTimeRemaining(endtime){
+let getTimeRemaining = function (endtime){
 	let t = Date.parse(endtime) - Date.parse(new Date()),
 	seconds = Math.floor((t/1000) % 60), //целые числа
 	minutes = Math.floor((t/1000/60) % 60),
@@ -56,15 +56,13 @@ function getTimeRemaining(endtime){
 	};
 
 }
-	function setClock(id, endtime){
+	let setClock = function (id, endtime){
 
 		let timer = document.getElementById(id),
 		hours = timer.querySelector('.hours'),
 		minutes = timer.querySelector('.minutes'),
 		seconds = timer.querySelector('.seconds'),
-		timeInterval = setInterval(updateClock, 1000);
-
-		function updateClock(){
+		updateClock = function (){
 			let t = getTimeRemaining(endtime);
 			(t.hours < 10) ? (t.hours = String('0' + t.hours)) : (t.minutes < 10) ? (t.minutes = String('0' + t.minutes)) : (t.seconds < 10) ? (t.seconds = String('0' + t.seconds	)) : {};
 			hours.textContent = t.hours;
@@ -82,6 +80,7 @@ function getTimeRemaining(endtime){
 		
 
 		}
+		timeInterval = setInterval(updateClock, 1000);
 	}
 
 
@@ -95,7 +94,7 @@ const more = document.querySelector('.more'),
 	container = document.querySelector('#about');
 
 
-	function showModal(a){
+	let showModal = function (a){
 		overlay.style.display = 'block';
 		a.classList.add('more-splash');
 		document.body.style.overflow = 'hidden';
@@ -131,8 +130,8 @@ const more = document.querySelector('.more'),
 
 
 
-	let step = 1;
-	function move(){
+	let step = 1,
+	move = function (){
 		let count = document.querySelector(h).getBoundingClientRect().top + document.documentElement.scrollTop;
 		if(document.documentElement.scrollTop < count){
 			if(document.documentElement.scrollTop != count){

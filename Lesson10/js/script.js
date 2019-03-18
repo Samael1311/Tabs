@@ -6,7 +6,7 @@ window.addEventListener('DOMContentLoaded', function(){
 		tabContent = document.querySelectorAll('.info-tabcontent');
 
 
-	let hideTabs = function (a = 1){
+	let hideTabs = (a = 1) => {
 		for (let i = a; i < tabContent.length; i++) {
 			tabContent[i].classList.remove('show');
 			tabContent[i].classList.add('hide');
@@ -16,7 +16,7 @@ window.addEventListener('DOMContentLoaded', function(){
 
 	hideTabs();
 
-	let showTabs = function (b){
+	let showTabs = (b) => {
 
 		if(tabContent[b].classList.contains('hide')){
 			tabContent[b].classList.remove('hide');
@@ -41,7 +41,7 @@ window.addEventListener('DOMContentLoaded', function(){
 //timer
 let deadline = '2019-03-20';
 
-let getTimeRemaining = function (endtime){
+let getTimeRemaining = (endtime) => {
 	let t = Date.parse(endtime) - Date.parse(new Date()),
 	seconds = Math.floor((t/1000) % 60), //целые числа
 	minutes = Math.floor((t/1000/60) % 60),
@@ -56,13 +56,13 @@ let getTimeRemaining = function (endtime){
 	};
 
 }
-	let setClock = function (id, endtime){
+	let setClock = (id, endtime) => {
 
 		let timer = document.getElementById(id),
 		hours = timer.querySelector('.hours'),
 		minutes = timer.querySelector('.minutes'),
 		seconds = timer.querySelector('.seconds'),
-		updateClock = function (){
+		updateClock = () => {
 			let t = getTimeRemaining(endtime);
 			(t.hours < 10) ? (t.hours = String('0' + t.hours)) : (t.minutes < 10) ? (t.minutes = String('0' + t.minutes)) : (t.seconds < 10) ? (t.seconds = String('0' + t.seconds	)) : {};
 			hours.textContent = t.hours;
@@ -94,7 +94,7 @@ const more = document.querySelector('.more'),
 	container = document.querySelector('#about');
 
 
-	let showModal = function (a){
+	let showModal = (a) => {
 		overlay.style.display = 'block';
 		a.classList.add('more-splash');
 		document.body.style.overflow = 'hidden';
@@ -128,10 +128,8 @@ const more = document.querySelector('.more'),
 		}
 	});
 
-
-
 	let step = 1,
-	move = function (){
+	 move = () => {
 		let count = document.querySelector(h).getBoundingClientRect().top + document.documentElement.scrollTop;
 		if(document.documentElement.scrollTop < count){
 			if(document.documentElement.scrollTop != count){

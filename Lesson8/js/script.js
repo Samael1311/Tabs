@@ -82,6 +82,44 @@ function getTimeRemaining(endtime){
 		}
 	}
 
-
 	setClock('timer', deadline);
+
+	let menu = document.querySelector('ul'), 
+	h, timerScroll;
+
+	menu.addEventListener('click', function(event){
+		if(event.target.matches('a')){
+		event.preventDefault();
+		h = event.target.href.replace(/[^#]*(.*)/, '$1');
+		timerScroll = setInterval(() => requestAnimationFrame(move), 30);
+
+		//requestAnimationFrame(move);
+		
+
+		}
+	});
+
+
+
+	let step = 1;
+	function move(){
+		let count = document.querySelector(h).getBoundingClientRect().top + document.documentElement.scrollTop;
+		if(document.documentElement.scrollTop < count){
+			if(document.documentElement.scrollTop != count){
+				document.documentElement.scrollTop += step;
+					requestAnimationFrame(move);
+			}
+		} else if(document.documentElement.scrollTop > count){
+				if(document.documentElement.scrollTop != count){
+				document.documentElement.scrollTop -= step;
+					requestAnimationFrame(move);
+			}
+		} else { clearInterval(timerScroll);}
+		
+			
+	//	console.log( document.querySelector(h).getBoundingClientRect().top + document.documentElement.scrollTop);
+		
+	}
+
+	
 })

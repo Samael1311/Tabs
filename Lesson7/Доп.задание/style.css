@@ -12,3 +12,8 @@ body {
 	height: 100px;
 	position: relative;
 }
+#start{
+	width: 50px;
+	height: 20px;
+	text-align: center;
+}

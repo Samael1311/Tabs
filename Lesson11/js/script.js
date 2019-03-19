@@ -150,9 +150,9 @@ const more = document.querySelector('.more'),
 
 //Form
 let message = {
-	loading: 'Загрузка...',
-	succes: 'Спасибо! Скоро мы с вами свяжемся!',
-	failure: 'Что-то пошло не так...'
+	loading: '<img src="img/ajax-loader.gif" alt="Загрузка...">',
+	succes: '<img src="img/tenor.gif" alt="Спасибо! Скоро мы с вами свяжемся!">',
+	failure: '<img src="img/warning.png" alt="Что-то пошло не так...">'
 };
 
 let form = document.querySelector('.main-form'),

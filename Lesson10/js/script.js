@@ -80,7 +80,7 @@ let getTimeRemaining = (endtime) => {
 		
 
 		}
-		timeInterval = setInterval(updateClock, 1000);
+		let timeInterval = setInterval(updateClock, 1000);
 	}
 
 

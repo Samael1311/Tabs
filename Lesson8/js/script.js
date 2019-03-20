@@ -103,7 +103,7 @@ function getTimeRemaining(endtime){
 
 	let step = 1;
 	function move(){
-		let count = document.querySelector(h).getBoundingClientRect().top + document.documentElement.scrollTop;
+	let count = Math.round(document.querySelector(h).getBoundingClientRect().top) + Math.round(document.documentElement.scrollTop);
 		if(document.documentElement.scrollTop < count){
 			if(document.documentElement.scrollTop != count){
 				document.documentElement.scrollTop += step;

@@ -131,7 +131,7 @@ const more = document.querySelector('.more'),
 
 	let step = 1,
 	 move = () => {
-		let count = Math.round(document.querySelector(h).getBoundingClientRect().top) + document.documentElement.scrollTop;
+		let count = Math.round(document.querySelector(h).getBoundingClientRect().top) + Math.round(document.documentElement.scrollTop);
 		if(document.documentElement.scrollTop < count){
 			if(document.documentElement.scrollTop != count){
 				document.documentElement.scrollTop += step;

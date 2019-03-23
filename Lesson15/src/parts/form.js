@@ -1,11 +1,11 @@
 function forms (){
-	let message = {
+	const message = {
 		loading: '<img src="img/ajax-loader.gif" alt="Загрузка...">',
 		succes: '<img src="img/tenor.gif" alt="Спасибо! Скоро мы с вами свяжемся!">',
 		failure: '<img src="img/warning.png" alt="Что-то пошло не так...">'
 	};
 	
-	let form = document.querySelector('.main-form'),
+	const form = document.querySelector('.main-form'),
 		input = form.getElementsByTagName('input'),
 		statusMessage = document.createElement('div'),
 		formUserData = document.querySelector('#form'),
@@ -13,7 +13,7 @@ function forms (){
 	
 		statusMessage.classList.add('status');
 	
-		formUserData.addEventListener('submit', function(event){
+		formUserData.addEventListener('submit', (event) => {
 			event.preventDefault();
 			//sendMessage(formUserData, inputUserData);
 			sendMessage(formUserData)
@@ -23,7 +23,7 @@ function forms (){
 		.then(clearInputs);
 		});
 	
-		form.addEventListener('submit', function (event){
+		form.addEventListener('submit', (event) => {
 			 event.preventDefault();
 			 //sendMessage(form, input);
 			 sendMessage(form)
@@ -38,18 +38,18 @@ function forms (){
 			form.appendChild(statusMessage);
 			let formData = new FormData(form); 
 	
-			 return new Promise(function(resolve, reject){
+			 return new Promise((resolve, reject) => {
 	
 				let request = new XMLHttpRequest();
 				request.open('POST', 'server.php');
 				request.setRequestHeader('Content-Type', 'application/json; charset=utf-8'); 
 				let obj = {};
-				formData.forEach(function(value, key){
+				formData.forEach((value, key) => {
 					obj[key] = value;
 				});
 				let json = JSON.stringify(obj);
 			
-				request.addEventListener('readystatechange', function (){
+				request.addEventListener('readystatechange', () => {
 					if(request.readyState < 4){
 					//	statusMessage.innerHTML = message.loading;
 						resolve();
@@ -78,12 +78,12 @@ function forms (){
 	
 		
 		//Enter only \d\+
-	inputUserData[1].addEventListener('keyup', function(e){
+	inputUserData[1].addEventListener('keyup', (e) => {
 	e.target.value = e.target.value.replace(/[^\d\+]/g,'');
 	
 	});
 	
-	input[0].addEventListener('keyup', function(e){
+	input[0].addEventListener('keyup', (e) => {
 		e.target.value = e.target.value.replace(/[^\d\+]/g,'');
 		
 		});

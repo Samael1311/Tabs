@@ -354,8 +354,8 @@ module.exports = scrolling;
 /***/ (function(module, exports) {
 
 function slider() {
-  var slideIndex = 1,
-      slides = document.querySelectorAll('.slider-item'),
+  var slideIndex = 1;
+  var slides = document.querySelectorAll('.slider-item'),
       prev = document.querySelector('.prev'),
       next = document.querySelector('.next'),
       dotsWrap = document.querySelector('.slider-dots'),
@@ -465,7 +465,7 @@ module.exports = tabs;
 /***/ (function(module, exports) {
 
 function timer() {
-  var deadline = '2019-03-20';
+  var deadline = '2019-03-24';
 
   var getTimeRemaining = function getTimeRemaining(endtime) {
     var t = Date.parse(endtime) - Date.parse(new Date()),

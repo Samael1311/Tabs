@@ -1,6 +1,6 @@
 function slider (){
-	let slideIndex = 1,
-	slides = document.querySelectorAll('.slider-item'),
+	let slideIndex = 1;
+ const	slides = document.querySelectorAll('.slider-item'),
 	prev= document.querySelector('.prev'),
 	next= document.querySelector('.next'),
 	dotsWrap = document.querySelector('.slider-dots'),

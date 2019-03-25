@@ -1991,6 +1991,12 @@ window.addEventListener('DOMContentLoaded', function () {
 
 __webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
 
+__webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
+
+__webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
+
+__webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
+
 function calculate() {
   var persons = document.querySelectorAll('.counter-block-input')[0],
       restDays = document.querySelectorAll('.counter-block-input')[1],
@@ -2051,6 +2057,24 @@ module.exports = calculate;
 
 "use strict";
 
+
+__webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
+
+__webpack_require__(/*! core-js/modules/es6.promise */ "../node_modules/core-js/modules/es6.promise.js");
+
+__webpack_require__(/*! core-js/modules/es6.object.to-string */ "../node_modules/core-js/modules/es6.object.to-string.js");
+
+__webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
+
+__webpack_require__(/*! core-js/modules/es6.promise */ "../node_modules/core-js/modules/es6.promise.js");
+
+__webpack_require__(/*! core-js/modules/es6.object.to-string */ "../node_modules/core-js/modules/es6.object.to-string.js");
+
+__webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
+
+__webpack_require__(/*! core-js/modules/es6.promise */ "../node_modules/core-js/modules/es6.promise.js");
+
+__webpack_require__(/*! core-js/modules/es6.object.to-string */ "../node_modules/core-js/modules/es6.object.to-string.js");
 
 __webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
 
@@ -2183,6 +2207,12 @@ module.exports = modal;
 
 "use strict";
 
+
+__webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
+
+__webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
+
+__webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
 
 __webpack_require__(/*! core-js/modules/es6.regexp.replace */ "../node_modules/core-js/modules/es6.regexp.replace.js");
 

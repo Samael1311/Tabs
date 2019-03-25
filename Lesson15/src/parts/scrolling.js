@@ -2,6 +2,12 @@
 
 require("core-js/modules/es6.regexp.replace");
 
+require("core-js/modules/es6.regexp.replace");
+
+require("core-js/modules/es6.regexp.replace");
+
+require("core-js/modules/es6.regexp.replace");
+
 function scrolling() {
   var menu = document.querySelector('ul');
   var h, timerScroll;

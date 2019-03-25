@@ -2,6 +2,12 @@
 
 require("core-js/modules/es6.regexp.replace");
 
+require("core-js/modules/es6.regexp.replace");
+
+require("core-js/modules/es6.regexp.replace");
+
+require("core-js/modules/es6.regexp.replace");
+
 function calculate() {
   var persons = document.querySelectorAll('.counter-block-input')[0],
       restDays = document.querySelectorAll('.counter-block-input')[1],

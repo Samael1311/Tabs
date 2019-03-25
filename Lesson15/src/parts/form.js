@@ -6,6 +6,24 @@ require("core-js/modules/es6.promise");
 
 require("core-js/modules/es6.object.to-string");
 
+require("core-js/modules/es6.regexp.replace");
+
+require("core-js/modules/es6.promise");
+
+require("core-js/modules/es6.object.to-string");
+
+require("core-js/modules/es6.regexp.replace");
+
+require("core-js/modules/es6.promise");
+
+require("core-js/modules/es6.object.to-string");
+
+require("core-js/modules/es6.regexp.replace");
+
+require("core-js/modules/es6.promise");
+
+require("core-js/modules/es6.object.to-string");
+
 function forms() {
   var message = {
     loading: '<img src="img/ajax-loader.gif" alt="Загрузка...">',

@@ -1,5 +1,3 @@
-//import "@babel/polyfill"; 
-///import {tabs} from './parts/tabs';
 window.addEventListener('DOMContentLoaded', function(){
 	'use strict';
 	
@@ -19,22 +17,5 @@ window.addEventListener('DOMContentLoaded', function(){
 	slider();
 	calculate();
 	scrolling();
-
-
-
-
-//modal window
-
-
-
-
-//Form
-
-
-//Slider
-
-
-
-
-//Calculate
+	
 });

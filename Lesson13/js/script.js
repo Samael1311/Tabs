@@ -132,7 +132,7 @@ const more = document.querySelector('.more'),
 	let step = 1,
 	 move = () => {
 		let count = Math.round(document.querySelector(h).getBoundingClientRect().top) + Math.round(document.documentElement.scrollTop);
-		if(document.documentElement.scrollTop < count){
+		if(document.documentElement.scrollTop < count && document.documentElement.scrollHeight != document.documentElement.scrollTop + document.documentElement.clientHeight){
 			if(document.documentElement.scrollTop != count){
 				document.documentElement.scrollTop += step;
 					requestAnimationFrame(move);
@@ -142,12 +142,15 @@ const more = document.querySelector('.more'),
 				document.documentElement.scrollTop -= step;
 					requestAnimationFrame(move);
 			}
-		} else { clearInterval(timerScroll);}
+		} else { 
+			Math.round(document.querySelector(h).getBoundingClientRect().top);
+			clearInterval(timerScroll);}
 		
 			
-	//	console.log( document.querySelector(h).getBoundingClientRect().top + document.documentElement.scrollTop);
+		//console.log( document.querySelector(h).getBoundingClientRect().top + document.documentElement.scrollTop);
 		
-	}
+	};
+	
 
 //Form
 let message = {

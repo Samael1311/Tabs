@@ -21,7 +21,7 @@ function scrolling() {
     }
   });
 
-  var step = 1,
+  var step = 1,a
       move = function move() {
     var count = Math.round(document.querySelector(h).getBoundingClientRect().top) + Math.round(document.documentElement.scrollTop);
 
@@ -39,6 +39,7 @@ function scrolling() {
       clearInterval(timerScroll);
     }
   };
+ 
 }
 
 module.exports = scrolling;

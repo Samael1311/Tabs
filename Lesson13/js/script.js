@@ -250,6 +250,7 @@ let slideIndex = 1,
 	prev= document.querySelector('.prev'),
 	next= document.querySelector('.next'),
 	dotsWrap = document.querySelector('.slider-dots'),
+	wrap = document.querySelector('.wrap'),
 	dots = document.querySelectorAll('.dot');
 
 	function showSlides(n){
@@ -262,6 +263,20 @@ let slideIndex = 1,
 		slides.forEach((item) => item.style.display = 'none');
 		dots.forEach((item) => item.classList.remove('dot-active'));
 		slides[slideIndex-1].style.display = 'block';
+
+	
+		setTimeout(()=>{
+			slides[slideIndex-1].style.cssText = 'transition: transform 2s linear;\
+			transform: rotate(360deg);';
+
+		}, 500);
+		setTimeout(()=>{
+			slides[slideIndex-1].style.removeProperty('transition');
+			slides[slideIndex-1].style.removeProperty('transform');
+		}, 2600);
+	
+		
+
 		dots[slideIndex-1].classList.add('dot-active');
 	}
 
@@ -282,8 +297,11 @@ prev.addEventListener('click', () => {
 });
 
 next.addEventListener('click', () => {
+
+
 	plusSlides(1);
 });
+
 
 dotsWrap.addEventListener('click', (event) => {
 	for(let i = 0; i < dots.length +1; i++){
@@ -311,7 +329,8 @@ let persons = document.querySelectorAll('.counter-block-input')[0],
 		if(restDays.value == '' || persons.value == ''){
 			totalValue.innerHTML = 0;
 		} else {
-			totalValue.innerHTML = total;
+			//totalValue.innerHTML = total;
+			changeTotal();
 		}
 	});
 
@@ -321,9 +340,26 @@ let persons = document.querySelectorAll('.counter-block-input')[0],
 		if(persons.value == '' || restDays.value == ''){
 			totalValue.innerHTML = 0;
 		} else {
-			totalValue.innerHTML = total;
+			//totalValue.innerHTML = total;
+			changeTotal();
+			
 		}
 	});
+	 console.log(typeof(+totalValue.innerHTML));
+	 function changeTotal(){
+		setTimeout(function run(){
+			if(+totalValue.innerHTML != total && +totalValue.innerHTML < total){
+				totalValue.innerHTML = +totalValue.innerHTML+1;
+				setTimeout(run, 1);
+			} else if(+totalValue.innerHTML != total && +totalValue.innerHTML > total){
+				totalValue.innerHTML = +totalValue.innerHTML-1;
+				setTimeout(run, 1);
+			} 
+			else {clearInterval(run);}
+		}, 100);
+	 };
+	
+
 
 	restDays.addEventListener('keyup', () => {
 		restDays.value = restDays.value.replace(/[^0-9]/g, '');
